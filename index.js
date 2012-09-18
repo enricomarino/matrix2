@@ -72,4 +72,25 @@
     return self;
   };
 
+  /**
+   * identity
+   * Set a 2d matrix to identity.
+   * 
+   * @param {Float32Array} self destination matrix
+   * @return {Float32Array} destination matrix
+   * @api public
+   */
+
+  matrix2.identity = function (self) {
+    self || (self = new vec([]));
+
+    self[0] = 1.0;
+    self[1] = 0.0;
+
+    self[2] = 0.0;
+    self[3] = 1.0;
+
+    return self;
+  };
+
 }(this));
