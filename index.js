@@ -258,5 +258,25 @@
     return self;
   };
 
+  /**
+   * diff
+   * Get the difference of matrix a and b.
+   * 
+   * @param {Float32Array} self matrix
+   * @param {Float32Array} a matrix
+   * @param {Float32Array} b matrix
+   * @return {Float32Array} matrix
+   * @api public
+   */
+
+  matrix2.diff = function (self, a, b) {
+    self[0] = a[0] - b[0];
+    self[1] = a[1] - b[1];
+
+    self[2] = a[2] - b[2];
+    self[3] = a[3] - b[3];
+
+    return self;
+  };
 
 }(this));
