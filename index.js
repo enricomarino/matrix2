@@ -107,4 +107,19 @@
     self[i] = value;
   };
 
+  /**
+   * set_value
+   * Set the value at (row, col) of the matrix.
+   * 
+   * @param {Float32Array} self matrix
+   * @param {Number} row row of the value
+   * @param {Number} col col of the value
+   * @param {Number} value value to set 
+   * @api public
+   */
+
+  matrix2.set_value = function (self, row, col, value) {
+    self[row + 2*col] = value;
+  };
+
 }(this));
