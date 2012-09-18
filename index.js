@@ -370,4 +370,24 @@
     return self;
   };
 
+  /**
+   * scale
+   * Scale matrix.
+   * 
+   * @param {Float32Array} self destination matrix
+   * @param {Float32Array} v scaling vector
+   * @return {Float32Array} matrix
+   * @api public
+   */
+
+  matrix2.scale = function (self, v) {
+    self[0] *= v[0];
+    self[1] *= v[0];
+
+    self[2] *= v[1];
+    self[3] *= v[1];
+
+    return self;
+  };
+  
 }(this));
