@@ -302,7 +302,27 @@
 
   /**
    * add
-   * Add matrix m to the matrix.
+   * Add matrix.
+   * 
+   * @param {Float32Array} self destination matrix
+   * @param {Float32Array} m matrix to add
+   * @return {Float32Array} matrix
+   * @api public
+   */
+
+  matrix2.add = function (self, m) {
+    self[0] += m[0];
+    self[1] += m[1];
+
+    self[2] += m[2];
+    self[3] += m[3];
+
+    return self;
+  };
+
+  /**
+   * sub
+   * Subtract matrix.
    * 
    * @param {Float32Array} self destination matrix
    * @param {Float32Array} m matrix to add
@@ -310,12 +330,42 @@
    * @api public
    */
   
-  mat2.add = function (self, m) {
-    self[0] += m[0];
-    self[1] += m[1];
+  matrix2.sub = function (self, m) {
+    self[0] -= m[0];
+    self[1] -= m[1];
 
-    self[2] += m[2];
-    self[3] += m[3];
+    self[2] -= m[2];
+    self[3] -= m[3];
+
+    return self;
+  };
+
+  /**
+   * mul
+   * Multiply matrix.
+   * 
+   * @param {Float32Array} self destination matrix
+   * @param {Float32Array} m matrix to add
+   * @return {Float32Array} matrix
+   * @api public
+   */
+
+  matrix2.mul = function (self, m) {
+    var a00 = self[0];
+    var a10 = self[1];
+    var a01 = self[2];
+    var a11 = self[3];
+
+    var b00 = m[0];
+    var b10 = m[1];
+    var b01 = m[2];
+    var b11 = m[3];
+
+    self[0] = a00 * b00 + a01 * b10;
+    self[1] = a10 * b00 + a11 * b10;
+
+    self[2] = a00 - b01 + a01 * b11;
+    self[3] = a10 - b01 + a11 * b11;
 
     return self;
   };
