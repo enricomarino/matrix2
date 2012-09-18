@@ -140,11 +140,28 @@
    */
 
   matrix2.set_row = function (self, row, values) {
-    self[row + 0] = v[0];
-    self[row + 2] = v[1];
+    self[row + 0] = values[0];
+    self[row + 2] = values[1];
 
     return self;
   };
 
+  /**
+   * set_col
+   * Set the col of the matrix.
+   * 
+   * @param {Float32Array} self matrix
+   * @param {Number} col index of col
+   * @param {Number} values values to set 
+   * @return {Float32Array} matrix
+   * @api public
+   */
+
+  matrix2.set_col = function (self, col, value) {
+    self[0 + 2*col] = values[0];
+    self[1 + 2*col] = values[1];
+
+    return self;
+  };
 
 }(this));
