@@ -389,5 +389,24 @@
 
     return self;
   };
-  
+
+  /**
+   * transpose
+   * Transpose matrix.
+   * 
+   * @param {Float32Array} self destination matrix
+   * @return {Float32Array} matrix
+   * @api public
+   */
+
+  matrix2.transpose = function (self) {
+    var temp;
+
+    temp = self[1];
+    self[1] = self[2];
+    self[2] = temp;
+
+    return self;
+  };
+
 }(this));
