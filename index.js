@@ -100,11 +100,14 @@
    * @param {Float32Array} self matrix
    * @param {Number} i index (from 0 to 3)
    * @param {Number} value the i-th value of the matrix 
+   * @return {Float32Array} matrix
    * @api public
    */
 
   matrix2.set = function (self, i, value) {
     self[i] = value;
+
+    return self;
   };
 
   /**
@@ -112,14 +115,36 @@
    * Set the value at (row, col) of the matrix.
    * 
    * @param {Float32Array} self matrix
-   * @param {Number} row row of the value
-   * @param {Number} col col of the value
+   * @param {Number} row index of row
+   * @param {Number} col index of col
    * @param {Number} value value to set 
+   * @return {Float32Array} matrix
    * @api public
    */
 
   matrix2.set_value = function (self, row, col, value) {
     self[row + 2*col] = value;
+
+    return self;
   };
+
+  /**
+   * set_row
+   * Set the row of the matrix.
+   * 
+   * @param {Float32Array} self matrix
+   * @param {Number} row index of row
+   * @param {Number} values values to set 
+   * @return {Float32Array} matrix
+   * @api public
+   */
+
+  matrix2.set_row = function (self, row, values) {
+    self[row + 0] = v[0];
+    self[row + 2] = v[1];
+
+    return self;
+  };
+
 
 }(this));
