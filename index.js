@@ -112,54 +112,54 @@
 
   /**
    * set_value
-   * Set the value at (row, col) of the matrix.
+   * Set the value at i-th row, j-th col of the matrix.
    * 
    * @param {Float32Array} self matrix
-   * @param {Number} row index of row
-   * @param {Number} col index of col
+   * @param {Number} i index of row
+   * @param {Number} j index of col
    * @param {Number} value value to set 
    * @return {Float32Array} matrix
    * @api public
    */
 
-  matrix2.set_value = function (self, row, col, value) {
-    self[row + 2*col] = value;
+  matrix2.set_value = function (self, i, j, value) {
+    self[i + 2*j] = value;
 
     return self;
   };
 
   /**
    * set_row
-   * Set the row of the matrix.
+   * Set the i-th row of the matrix.
    * 
    * @param {Float32Array} self matrix
-   * @param {Number} row index of row
+   * @param {Number} i index of row
    * @param {Number} values values to set 
    * @return {Float32Array} matrix
    * @api public
    */
 
-  matrix2.set_row = function (self, row, values) {
-    self[row + 0] = values[0];
-    self[row + 2] = values[1];
+  matrix2.set_row = function (self, i, values) {
+    self[i    ] = values[0];
+    self[i + 2] = values[1];
 
     return self;
   };
 
   /**
    * set_col
-   * Set the col of the matrix.
+   * Set the j-th col of the matrix.
    * 
    * @param {Float32Array} self matrix
-   * @param {Number} col index of col
+   * @param {Number} j index of col
    * @param {Number} values values to set 
    * @return {Float32Array} matrix
    * @api public
    */
 
-  matrix2.set_col = function (self, col, value) {
-    self[0 + 2*col] = values[0];
-    self[1 + 2*col] = values[1];
+  matrix2.set_col = function (self, j, values) {
+    self[    2*j] = values[0];
+    self[1 + 2*j] = values[1];
 
     return self;
   };
@@ -180,7 +180,7 @@
 
   /**
    * get_value
-   * Get the value of the matrix at (row, col).
+   * Get the value at the i-th row, j-th col of the matrix.
    * 
    * @param {Float32Array} self matrix
    * @param {Number} row index of row
@@ -189,30 +189,52 @@
    * @api public
    */
 
-  matrix2.get_value = function (self, row, col) {
-    return self[row + 2*col];
+  matrix2.get_value = function (self, i, j) {
+    return self[i + 2*j];
   };
 
   /**
    * get_row
-   * Get the row of the matrix.
+   * Get the i-th row of the matrix.
    * 
    * @param {Float32Array} self matrix
-   * @param {Number} row index of row
+   * @param {Number} i index of row
+   * @param {Number} values values to set 
+   * @return {Float32Array} the i-th row of the matrix
+   * @api public
+   */
+
+  matrix2.get_row = function (self, i, values) {
+    if (values === undefined) {
+      values = new Float32Array([0.0, 0.0]);
+    }
+
+    values[0] = self[i];
+    values[1] = self[i + 2];
+
+    return values;
+  };
+
+  /**
+   * get_col
+   * Get the j-th col of the matrix.
+   * 
+   * @param {Float32Array} self matrix
+   * @param {Number} j index of row
    * @param {Number} values values to set 
    * @return {Float32Array} matrix
    * @api public
    */
 
-  matrix2.get_row = function (self, row, vector) {
+  matrix2.get_col = function (self, j, values) {
     if (vector === undefined) {
       vector = new Float32Array([0.0, 0.0]);
     }
-
+    
     vector[0] = self[row + 0];
     vector[1] = self[row + 2];
 
     return vector;
   };
-
+  
 }(this));
