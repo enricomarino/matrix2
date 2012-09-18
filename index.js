@@ -6,7 +6,7 @@
  * MIT License
  */
 
- !(function (exports) {
+!(function (exports) {
 
   /**
    * Library namespace.
@@ -18,7 +18,7 @@
    * Library version.
    */
 
-  matrix2.version = '0.0.0';
+  matrix2.version = '0.1.0';
 
   /**
    * create
