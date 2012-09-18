@@ -193,4 +193,26 @@
     return self[row + 2*col];
   };
 
+  /**
+   * get_row
+   * Get the row of the matrix.
+   * 
+   * @param {Float32Array} self matrix
+   * @param {Number} row index of row
+   * @param {Number} values values to set 
+   * @return {Float32Array} matrix
+   * @api public
+   */
+
+  matrix2.get_row = function (self, row, vector) {
+    if (vector === undefined) {
+      vector = new Float32Array([0.0, 0.0]);
+    }
+
+    vector[0] = self[row + 0];
+    vector[1] = self[row + 2];
+
+    return vector;
+  };
+
 }(this));
