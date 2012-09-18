@@ -76,8 +76,8 @@
    * identity
    * Set a 2d matrix to identity.
    * 
-   * @param {Float32Array} self destination matrix
-   * @return {Float32Array} destination matrix
+   * @param {Float32Array} self matrix
+   * @return {Float32Array} matrix
    * @api public
    */
 
@@ -91,6 +91,20 @@
     self[3] = 1.0;
 
     return self;
+  };
+
+  /**
+   * set
+   * Set the i-th value of the matrix.
+   * 
+   * @param {Float32Array} self matrix
+   * @param {Number} i index (from 0 to 3)
+   * @param {Number} value the i-th value of the matrix 
+   * @api public
+   */
+
+  matrix2.set = function (self, i, value) {
+    self[i] = value;
   };
 
 }(this));
