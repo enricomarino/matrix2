@@ -178,4 +178,19 @@
     return self[i];
   };
 
+  /**
+   * get_value
+   * Get the value of the matrix at (row, col).
+   * 
+   * @param {Float32Array} self matrix
+   * @param {Number} row index of row
+   * @param {Number} col index of col
+   * @return {Number} the value of the matrix 
+   * @api public
+   */
+
+  matrix2.get_value = function (self, row, col) {
+    return self[row + 2*col];
+  };
+
 }(this));
