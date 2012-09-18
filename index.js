@@ -300,4 +300,24 @@
     return self;
   };
 
+  /**
+   * add
+   * Add matrix m to the matrix.
+   * 
+   * @param {Float32Array} self destination matrix
+   * @param {Float32Array} m matrix to add
+   * @return {Float32Array} matrix
+   * @api public
+   */
+  
+  mat2.add = function (self, m) {
+    self[0] += m[0];
+    self[1] += m[1];
+
+    self[2] += m[2];
+    self[3] += m[3];
+
+    return self;
+  };
+
 }(this));
