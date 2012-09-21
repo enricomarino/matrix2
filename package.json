@@ -6,7 +6,7 @@
   },
   "name": "matrix2",
   "description": "JavaScript math library for 2d matrix",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "homepage": "https://github.com/onirame/matrix2",
   "repository": {
     "type": "git",

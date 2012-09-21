@@ -231,8 +231,8 @@
       vector = new Float32Array([0.0, 0.0]);
     }
     
-    vector[0] = self[row + 0];
-    vector[1] = self[row + 2];
+    vector[0] = self[j + 0];
+    vector[1] = self[j + 2];
 
     return vector;
   };
