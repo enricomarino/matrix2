@@ -1,16 +1,25 @@
 {
   "author": {
     "name": "Enrico Marino",
-    "email": "enrico.marino@email.com",
-    "site": "http://onirame.no.de"
+    "email": "enrico.marino@email.com"
   },
+  "maintainers": [
+    {
+      "name": "Enrico Marino",
+      "email": "enrico.marino@email.com"
+    },
+    {
+      "name": "Federico Spini",
+      "email": "federico.spini@gmail.com"
+    }
+  ],
   "name": "matrix2",
-  "description": "JavaScript math library for 2d matrix",
+  "description": "JavaScript 2d matrix library",
   "version": "0.1.0",
-  "homepage": "https://github.com/onirame/matrix2",
+  "homepage": "https://github.com/cvdlab/matrix2",
   "repository": {
     "type": "git",
-    "url": "git://github.com/onirame/matrix2.git"
+    "url": "git://github.com/cvdlab/matrix2.git"
   },
   "main": "index.js",
   "engines": {
