@@ -2,8 +2,9 @@
 /* !
  * matrix2
  * JavaScript 2d matrix library
- * Copyright (c) 2012 Enrico Marino
- * MIT License
+ *
+ * @copyright 2013 Enrico Marino (http://onirame.com)
+ * @license MIT
  */
 
 /**
@@ -16,7 +17,7 @@ var matrix2 = exports;
  * Library version.
  */
 
-matrix2.version = '0.1.1';
+matrix2.version = '0.2.0';
 
 /**
  * create
