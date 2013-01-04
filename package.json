@@ -16,10 +16,10 @@
       "url": "http://federicospini.com"
     }
   ],
-  "homepage": "https://github.com/cvdlab/matrix2",
+  "homepage": "https://github.com/component-math/matrix2",
   "repository": {
     "type": "git",
-    "url": "git://github.com/cvdlab/matrix2.git"
+    "url": "git://github.com/component-math/matrix2.git"
   },
   "main": "index.js",
   "engines": {

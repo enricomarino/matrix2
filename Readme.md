@@ -4,7 +4,7 @@ JavaScript 2d matrix library
 
 ## Installation
 
-    $ npm install matrix2
+    $ component install component-math/matrix2
 
 ## License
 
