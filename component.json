@@ -1,0 +1,14 @@
+{
+  "name": "matrix2",
+  "repo": "cvdlab/matrix2",
+  "version": "0.2.0",
+  "description": "JavaScript 2d matrix library",
+  "keywords": ["math", "matrix", "2d"],
+  "scripts": ["index.js"],
+  "dependencies": {
+  },
+  "development": {
+    "component/assert": "*"
+  },
+  "license": "MIT"
+}
