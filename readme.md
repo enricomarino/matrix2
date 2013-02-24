@@ -1,16 +1,16 @@
 # matrix2
 
-JavaScript 2d matrix library
+Matrix 2D component
 
 ## Installation
 
-    $ component install component-math/matrix2
+    $ component install enricomarino/matrix2
 
 ## License
 
 (The MIT License)
 
-Copyright (c) 2012 Enrico Marino
+Copyright (c) 2013 Enrico Marino
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
