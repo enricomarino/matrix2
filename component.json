@@ -1,8 +1,8 @@
 {
   "name": "matrix2",
-  "repo": "component-math/matrix2",
+  "repo": "enricomarino/matrix2",
   "version": "0.2.0",
-  "description": "JavaScript 2d matrix library",
+  "description": "Matrix 2D component",
   "keywords": ["math", "matrix", "2d"],
   "scripts": ["index.js"],
   "dependencies": {
