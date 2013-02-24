@@ -1,9 +1,9 @@
 
-/* !
+/**
  * matrix2
- * JavaScript 2d matrix library
+ * Matrix 2D component
  *
- * @copyright 2013 Enrico Marino (http://onirame.com)
+ * @copyright 2013 Enrico Marino
  * @license MIT
  */
 
@@ -12,12 +12,6 @@
  */
 
 var matrix2 = exports;
-
-/**
- * Library version.
- */
-
-matrix2.version = '0.2.0';
 
 /**
  * create
